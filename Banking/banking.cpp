@@ -16,3 +16,22 @@ void Account::displayAccount() {
     std::cout << "Name: " << name << std::endl;
     std::cout << "Balance: " << balance << std::endl;
 }
+
+void Bank::createAccount() {
+    std::string name;
+    double balance;
+    
+    std::cin.ignore();
+    
+    std:: cout << "Name: ";
+    std::getline(std::cin, name);
+    std::cout << "Balance: ";
+    std::cin >> balance;
+    std::cin.ignore();
+    
+    Account newAccount(nextAccountNumber, name, balance);
+    accounts.push_back(newAccount);
+    ++nextAccountNumber;
+    
+    std::cout << "Account added!\n";
+}
