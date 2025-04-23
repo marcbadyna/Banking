@@ -49,3 +49,15 @@ void Bank::displayAllAccounts() {
 double Account::getBalance() {
     return balance;
 }
+
+void Account::deposit(double amount) {
+    balance += amount;
+}
+
+void Account::withdrawal(double amount) {
+    if (amount <= balance) {
+        balance -= amount;
+    } else {
+        std::cout << "Insufficient Funds!\n";
+    }
+}
