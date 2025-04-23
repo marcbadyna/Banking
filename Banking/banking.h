@@ -17,7 +17,7 @@ private:
     double balance;
 public:
     Account(int accountNumber, std::string name, double balance);
-    void displayAccount();
+    void displayAccount() const;
     double deposit(double);
     double withdrawal(double);
     void getBalance();
