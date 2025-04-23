@@ -13,11 +13,11 @@ int main() {
     int choice;
     
     do {
-        std::cout << "1. Create Account";
-        std::cout << "2. Deposit";
-        std::cout << "3. Withdrawal";
-        std::cout << "4. Display All Accounts";
-        std::cout << "5. exit";
+        std::cout << "1. Create Account\n";
+        std::cout << "2. Deposit\n";
+        std::cout << "3. Withdrawal\n";
+        std::cout << "4. Display All Accounts\n";
+        std::cout << "5. exit\n";
         std::cout << "Enter your choice: ";
         
         std::cin >> choice;

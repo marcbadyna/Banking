@@ -100,7 +100,7 @@ void Bank::withdrawal() {
     for (auto& account : accounts) {
         if (account.getAccountNumber() == accNum) {
             account.withdrawal(amount);
-            std::cout << "Withdrawal attempted.\n";
+            std::cout << "Withdrawing $" << amount << std::endl;
             return;
         }
     }
