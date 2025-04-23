@@ -18,9 +18,9 @@ private:
 public:
     Account(int accountNumber, std::string name, double balance);
     void displayAccount() const;
-    double deposit(double);
-    double withdrawal(double);
-    void getBalance();
+    void deposit(double);
+    void withdrawal(double);
+    double getBalance() const;
 };
 
 class Bank {

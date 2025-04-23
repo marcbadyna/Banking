@@ -45,3 +45,7 @@ void Bank::displayAllAccounts() {
         }
     }
 }
+
+double Account::getBalance() const {
+    return balance;
+}
