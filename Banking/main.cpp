@@ -6,8 +6,42 @@
 //
 
 #include <iostream>
+#include "banking.h"
 
 int main() {
+    Bank bank;
+    int choice;
+    
+    do {
+        std::cout << "1. Create Account";
+        std::cout << "2. Deposit";
+        std::cout << "3. Withdrawal";
+        std::cout << "4. Display All Accounts";
+        std::cout << "5. exit";
+        std::cout << "Enter your choice: ";
+        
+        std::cin >> choice;
+        
+        switch (choice) {
+            case 1:
+                bank.createAccount();
+                break;
+            case 2:
+                bank.deposit();
+                break;
+            case 3:
+                bank.withdrawal();
+                break;
+            case 4:
+                bank.displayAllAccounts();
+                break;
+            case 5:
+                break;
+            default:
+                std::cout << "Invalid Choice!";
+                break;
+        }
+    } while (choice != 5);
     
     return 0;
 }

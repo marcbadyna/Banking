@@ -11,6 +11,11 @@ Account::Account(int accountNumber, std::string name, double balance) : accountN
 
 Bank::Bank() : nextAccountNumber(1) {}
 
+int Account::getAccountNumber() const {
+    return accountNumber;
+}
+
+
 void Account::displayAccount() const {
     std::cout << "Account Number: " << accountNumber << std::endl;
     std::cout << "Name: " << name << std::endl;
@@ -60,4 +65,44 @@ void Account::withdrawal(double amount) {
     } else {
         std::cout << "Insufficient Funds!\n";
     }
+}
+
+void Bank::deposit() {
+    int accNum;
+    double amount;
+    
+    std::cout << "Enter account number: ";
+    std::cin>> accNum;
+    
+    std::cout << "Enter amount to deposit: ";
+    std::cin>> amount;
+    
+    for (auto& account : accounts) {
+        if (account.getAccountNumber() == accNum) {
+            account.deposit(amount);
+            std::cout << "Deposit Successful!\n";
+            return;
+        }
+    }
+    std::cout << "Account not found.\n";
+}
+
+void Bank::withdrawal() {
+    int accNum;
+    double amount;
+    
+    std::cout << "Enter account number: ";
+    std::cin>> accNum;
+    
+    std::cout << "Enter amount to withdraw: ";
+    std::cin >> amount;
+    
+    for (auto& account : accounts) {
+        if (account.getAccountNumber() == accNum) {
+            account.withdrawal(amount);
+            std::cout << "Withdrawal attempted.\n";
+            return;
+        }
+    }
+    std::cout << "Account not found.\n";
 }

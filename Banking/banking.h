@@ -18,9 +18,10 @@ private:
 public:
     Account(int accountNumber, std::string name, double balance);
     void displayAccount() const;
-    void deposit(double);
-    void withdrawal(double);
     double getBalance();
+    int getAccountNumber() const;
+    void deposit(double amount);
+    void withdrawal(double amount);
 };
 
 class Bank {
@@ -31,6 +32,8 @@ public:
     Bank();
     void createAccount();
     void displayAllAccounts();
+    void deposit();
+    void withdrawal();
 };
 
 #endif
