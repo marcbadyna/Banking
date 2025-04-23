@@ -8,6 +8,7 @@
 #ifndef banking_h
 #define banking_h
 #include <string>
+#include <vector>
 
 class Account {
 private:
@@ -16,6 +17,20 @@ private:
     double balance;
 public:
     Account(int accountNumber, std::string name, double balance);
+    void displayAccount();
+    double deposit(double);
+    double withdrawal(double);
+    void getBalance();
+};
+
+class Bank {
+private:
+    std::vector<Account> accounts;
+    int nextAccountNumber;
+public:
+    Bank();
+    void createAccount();
+    void displayAllAccounts();
 };
 
 #endif
