@@ -46,6 +46,6 @@ void Bank::displayAllAccounts() {
     }
 }
 
-double Account::getBalance() const {
+double Account::getBalance() {
     return balance;
 }

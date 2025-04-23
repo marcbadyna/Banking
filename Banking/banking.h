@@ -20,7 +20,7 @@ public:
     void displayAccount() const;
     void deposit(double);
     void withdrawal(double);
-    double getBalance() const;
+    double getBalance();
 };
 
 class Bank {
